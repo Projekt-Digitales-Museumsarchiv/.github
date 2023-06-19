@@ -26,4 +26,4 @@ Open-Source Projekten kostenlos lizensiert werden.
 ## Komponenten bzw. Teilprojekte
 
 Die Teilprojekte sind dokumentiert in 
-[Komponenten / Teilprojekte](https://github.com/Projekt-Digitales-Museumsarchiv/.github/blob/main/Teilprojekte.md)
+[Komponenten / Teilprojekte](Teilprojekte.md)
