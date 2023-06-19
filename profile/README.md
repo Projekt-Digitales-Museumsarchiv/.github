@@ -100,7 +100,7 @@ Die Plattform ist noch auszuwählen. Derzeit sind folgende Möglichkeiten in Eva
 - React
 - Vaadin
 
-### Frontend Desktop App ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+### Frontend Desktop App ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg)
 Die Desktop-App wird für Vorgänge benötigt, die aus einem Webclient nicht möglich sind, z.B. aufgrund von Hardware-Zugriffen.
 Folgende Operationen sind für die Desktop-App vorgesehen:
 - Aufnahme von Einzelbildern mit der Webcam
