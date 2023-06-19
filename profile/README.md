@@ -26,4 +26,4 @@ Open-Source Projekten kostenlos lizensiert werden.
 ## Komponenten bzw. Teilprojekte
 
 Die Teilprojekte sind dokumentiert in 
-[Komponenten / Teilprojekte](Teilprojekte.md)
+[Komponenten / Teilprojekte](/profile/Teilprojekte.md)
