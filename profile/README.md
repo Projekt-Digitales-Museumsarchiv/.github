@@ -16,30 +16,36 @@ ohne dass in jeder Stadt oder jedem Verbundraum das Rad immer wieder neu erfunde
 Basis aller Daten ist das Dateisystem. Viele Archive haben schon eine Sammlung von PDF- oder Bilddateien zusammengetragen.
 Um diese nicht zu gefährden, gibt es für das gesamte Archivsystem ausschließlich lesenden Zugriff auf die Bestandsdaten.
 
-Nötige Katalogdaten werden - um den Import und Export zu erleichtern - in einem Schattenverzeichnis gespeichert, das identischen Aufbau hat.
+Nötige Katalogdaten werden - um den Import und Export zu erleichtern - in einem Schattenverzeichnis gespeichert, das 
+identischen Aufbau hat.
 Auf die Katalogdaten hat das System Lese-/Schreib- und Löschzugriff.
 
 Um die Datenabfrage und -auswertung zu beschleunigen werden Referenzdaten in einer Datenbank gehalten.
 Die Datenbank wird bei Bedarf aus den Bestands- und Katalogdaten ganz oder teilweise neu erstellt.
 
-Die Projektsprache ist - schon aufgrund des Zielpublikums - Deutsch, ebenso sind alle UI-Elemente in deutscher Sprache gehalten.
+Die Projektsprache ist - schon aufgrund des Zielpublikums - Deutsch, ebenso sind alle UI-Elemente in deutscher Sprache 
+gehalten.
 
 ### Zielsysteme
 
 Für die Serverseite sind Linux-Systeme vorgesehen, die ohne vollständige grafische Oberfläche betrieben werden und daher
-keine teure Hardware erfordern. Das auf dem Server laufende Backend wird als Linux-DEB-Paket und als Docker-Image bereitgestellt.
+keine teure Hardware erfordern. Das auf dem Server laufende Backend wird als Linux-DEB-Paket und als Docker-Image 
+bereitgestellt.
 
 Für alle Client-Systeme, die einen Webbrowser beinhalten, wird ein Webclient angeboten, der auf allen aktuellen Browsern
-lauffähig sein sollte. Die nötige Anwendung wird ebenfalls als Linux-Paket und als Docker-Image bereitgestellt.
+lauffähig sein sollte. Die nötige Anwendung wird ebenfalls als Linux-Paket und als Docker-Image bereitgestellt, kann
+aber auf jedem Betriebssystem angezeigt werden, also auf jeden Fall in Windows und Linux, ggf. auch auf Chrome OS oder 
+vielleicht sogar Apple.
 
 Um hardwarenahe Funktionalitäten wie Kamera-Zugriff oder Scannen von Covers anbieten zu können, wird ein Desktop-Client
-angeboten. Dieser wird plattformneutral in Java entwickelt und als Linux-Paket und als Windows-MSI-Installer bereitgestellt.
+angeboten. Dieser wird plattformneutral in Java entwickelt und als Linux-Paket und als Windows-MSI-Installer 
+bereitgestellt.
 
 Als Erleichterung bei der Datenerfassung wird eine Android-App angeboten, die primär zum Scannen von Barcodes "am Regal",
-hauptsächlich für Bücher und Medien neueren Datums, gedacht ist. Diese wird entweder als "Side load" oder vielleicht auch über
-den offiziellen Google-Store angeboten.
+hauptsächlich für Bücher und Medien neueren Datums, gedacht ist. Diese wird entweder als "Side load" oder vielleicht 
+auch über den offiziellen Google-Store angeboten.
 
-Aufgrund zu hoher Hardwarekosten ist keine Unterstützung für die Apple Plattform vorgesehen.
+Aufgrund zu hoher Hardwarekosten und diverser Restriktionen ist keine Unterstützung für die Apple Plattform vorgesehen.
 
 ### Toolset
 Für die Implementierung kommen ausschließlich kostenlose Open-Source-Komponenten zum Einsatz. Als Tools für die 
@@ -60,11 +66,12 @@ Für alle Builds und Bereitstellungen kommen voraussichtlich Github-Actions zum 
 Als Entwicklungswerkzeug werden empfohlen:
 
 - IDEA Intellij (kostenlos für Studenten und Open-Source-Entwickler)
-- Microsoft Visual Studio Code (kostenlos)
+- Microsoft Visual Studio Code (grundsätzlich kostenlos, aber im Funktionsumfang eingeschränkt)
 
 #### Codeanalyse, Vulnerability Scan etc.
 
-Hierfür ist SonarCloud vorgesehen, ggf. mit Unterstützung von OWASP Dependency Check.
+- Statische Codeanalyse: SonarCloud (kostenlos für OpenSource)
+- Vulnerability Scan: ggf. OWASP Dependency Check (kostenlos, aber Integration ist noch zu prüfen)
 
 ## Komponenten bzw. Teilprojekte
 
@@ -89,19 +96,22 @@ Das Backend wird realisiert mit Spring-Boot.
 Das webbasierte Frontend ist eine Webanwendung, über die alle Abfragen gestartet werden. Die verschiedenen Abfragevarianten werden
 über REST an das Backend übergeben und die Antworten des Backends werden im Frontend angezeigt.
 #### Betriebssysteme
-Als reine Webanwendung kann das Frontend von jedem modernen Browser aufgerufen werden. ![Generic badge](https://img.shields.io/badge/OS-beliebig-green.svg?logo=googlechrome)
+Als reine Webanwendung kann das Frontend von jedem modernen Browser aufgerufen werden. 
+![Generic badge](https://img.shields.io/badge/OS-beliebig-green.svg?logo=googlechrome)
 
-Gehostet wird das Backend auf einem Linux-Server oder als Docker-Image. ![Generic badge](https://img.shields.io/badge/Package-deb-green.svg?logo=debian)
+Gehostet wird das Backend auf einem Linux-Server oder als Docker-Image. 
+![Generic badge](https://img.shields.io/badge/Package-deb-green.svg?logo=debian)
 ![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)
 
 #### Entwicklungsplattform
-Die Plattform ist noch auszuwählen. Derzeit sind folgende Möglichkeiten in Evaluation:
+Die Plattform bzw. das Framework ist noch auszuwählen. Derzeit sind folgende Möglichkeiten in Evaluation:
 - Angular
 - React
 - Vaadin
 
 ### Frontend Desktop App ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg)
-Die Desktop-App wird für Vorgänge benötigt, die aus einem Webclient nicht möglich sind, z.B. aufgrund von Hardware-Zugriffen.
+Die Desktop-App wird für Vorgänge benötigt, die aus einem Webclient nicht möglich sind, z.B. aufgrund von 
+Hardware-Zugriffen.
 Folgende Operationen sind für die Desktop-App vorgesehen:
 - Aufnahme von Einzelbildern mit der Webcam
 - Suche nach ISBN/EAN-Barcodes im aufgenommenen Bild
