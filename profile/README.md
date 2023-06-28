@@ -140,3 +140,17 @@ Module zuzugreifen.
 Der Mobile Client wird ausschließlich für die Android-Plattform entwickelt. Die Windows-Phone-Umgebung hat keine
 nennenswerte Verbreitung und die Apple Plattform würde zu hohe Hardware-Kosten auslösen.
 
+### Volltextsuche / Index ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+Das Backend stellt eine Kategorie- und Dateiübersicht bereit. Um aber eine alltagstaugliche Recherche zu ermöglichen,
+wird zusätzlich eine flexible Volltext-Suchfunktion benötigt. Dafür soll die Standardsoftware "Elasticsearch" untersucht werden.
+
+### 3rd Party Tools ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+Für die Vorbereitung der Dateien zur Archivierung sollen möglichst kostenlose Standardtools genutzt werden, um die zu
+archivierenden Dateien im vorgsehenen Format und mit den vorgesehenen Eigenschaften bereitzustellen. Dazu sind folgende
+Tools in der Auswahl:
+
+- Taggen von MP3/MP4 Dateien: MP3Tag ![Generic badge](https://img.shields.io/badge/Tool-Ausgewählt-green.svg)
+- Scannen von beliebigen Dokumenten von beliebigen Scannern als PDF: NAPS2 ![Generic badge](https://img.shields.io/badge/Tool-Ausgewählt-green.svg)
+- Taggen von PDF-Dateien: (TBA) ![Generic badge](https://img.shields.io/badge/Tool-Auf_der_Suche-red.svg)
+- Dashboard als Einstieg in die Archivverwaltung: Heimdall ![Generic badge](https://img.shields.io/badge/Tool-Ausgewählt-green.svg)
+
