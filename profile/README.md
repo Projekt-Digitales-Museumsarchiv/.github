@@ -109,6 +109,13 @@ Die Plattform bzw. das Framework ist noch auszuwählen. Derzeit sind folgende M�
 - React
 - Vaadin
 
+### Such- und Indexsystem ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+Um das Rad nicht neu zu erfinden, soll auf ein frei verfügbares Standardsystem zum Durchsuchen und Indizieren zurückgegriffen werden.
+
+In Evaluation befinden sich derzeit:
+- Elastic Search
+- OpenSearch
+
 ### Frontend Desktop App ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg)
 Die Desktop-App wird für Vorgänge benötigt, die aus einem Webclient nicht möglich sind, z.B. aufgrund von 
 Hardware-Zugriffen.
