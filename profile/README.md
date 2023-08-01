@@ -95,6 +95,8 @@ Das Backend wird realisiert mit Spring-Boot.
 ### Frontend Web ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
 Das webbasierte Frontend ist eine Webanwendung, über die alle Abfragen gestartet werden. Die verschiedenen Abfragevarianten werden
 über REST an das Backend übergeben und die Antworten des Backends werden im Frontend angezeigt.
+Sollte es zu einer Implementierung mit Vaadin kommen, so werden Front- und Backend als Einheit entwickelt.
+
 #### Betriebssysteme
 Als reine Webanwendung kann das Frontend von jedem modernen Browser aufgerufen werden. 
 ![Generic badge](https://img.shields.io/badge/OS-beliebig-green.svg?logo=googlechrome)
@@ -120,13 +122,16 @@ In Evaluation befinden sich derzeit:
 Die Desktop-App wird für Vorgänge benötigt, die aus einem Webclient nicht möglich sind, z.B. aufgrund von 
 Hardware-Zugriffen.
 Folgende Operationen sind für die Desktop-App vorgesehen:
-- Aufnahme von Einzelbildern mit der Webcam
-- Suche nach ISBN/EAN-Barcodes im aufgenommenen Bild
-- ISBN/EAN-Barcode auswerten
-- Foto einer aufgedruckten ISBN mit OCR auswerten
+- Aufnahme von Einzelbildern mit der Webcam (native in JavaFX)
+- Suche nach ISBN/EAN-Barcodes im aufgenommenen Bild (evtl. Apache Tika)
+- ISBN/EAN-Barcode auswerten (TBA)
+- Foto einer aufgedruckten ISBN mit OCR auswerten (evtl. Apache Tika)
 - Abfrage von Mediendaten und Cover aus einer externen Datenbank (Partner gesucht!)
 - Ggf. Mediendaten manuell erfassen und Coverfoto aufnehmen.
 - Katalogdaten erzeugen und in DB speichern
+
+Sollte eine hardwarenahe Funktionalität wie die Aufnahme von Webcam und das Scannen von Dokumenten in einer Webanwendung möglich sein (dafür gibt es Anzeichen bei Vaadin), so könnte der Desktop Client potentiell entfallen.
+Dies erfordert aber weitere Untersuchungen.
 
 #### Betriebssysteme
 
