@@ -75,40 +75,46 @@ Als Entwicklungswerkzeug werden empfohlen:
 
 ## Komponenten bzw. Teilprojekte
 
-
-![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg) 
 ### Backend
+![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg)
+
 Das Backend läuft auf dem zentralen Server und hat als einzige Komponente direkten Zugriff auf die Bestandsdaten.
 Andere Komponenten greifen über eine Rest-Schnittstelle zu, um Jobs zu starten, Katalogdaten zu bearbeiten, oder Daten abzufragen.
 
-
+#### Betriebssysteme
 ![Generic badge](https://img.shields.io/badge/OS-Linux-green.svg?logo=linux)
 ![Generic badge](https://img.shields.io/badge/Package-deb-green.svg?logo=debian)
 ![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)
-#### Betriebssysteme
+
 Aus Kostengründen sind Linux-Server vorgesehen, vorzugsweise mit einer leicht bedienbaren Oberfläche,
 wie z.B. das Projekt "OpenMediaVault". Windows-Server sind von den Lizenzkosten her deutlich teurer, hinzu kämen noch
 höhere Kosten für die benötigte Hardware aufgrund der grafischen Oberfläche.
 Alternativ kann das Backend als Docker-Image auf jeder kompatiblen Plattform installiert werden.
 
-
-![Generic badge](https://img.shields.io/badge/Plattform-Spring_Boot-green.svg?logo=springboot)
 #### Entwicklungsplattform
+![Generic badge](https://img.shields.io/badge/Plattform-Spring_Boot-green.svg?logo=springboot)
+
 Das Backend wird realisiert mit Spring-Boot.
 
-
-![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
 ### Frontend Web 
+![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+
 Das webbasierte Frontend ist eine Webanwendung, über die alle Abfragen gestartet werden. Die verschiedenen Abfragevarianten werden
 über REST an das Backend übergeben und die Antworten des Backends werden im Frontend angezeigt.
 Sollte es zu einer Implementierung mit Vaadin kommen, so werden Front- und Backend als Einheit entwickelt.
 
-
-![Generic badge](https://img.shields.io/badge/OS-beliebig-green.svg?logo=googlechrome)
 #### Betriebssysteme
-Als reine Webanwendung kann das Frontend von jedem modernen Browser aufgerufen werden. 
-Gehostet wird das Backend auf einem Linux-Server oder als Docker-Image. 
+![Generic badge](https://img.shields.io/badge/OS-beliebig-green.svg?logo=googlechrome)
 
+Als reine Webanwendung kann das Frontend von jedem modernen Browser aufgerufen werden. 
+Gehostet wird das Frontend auf einem Linux-Server oder als Docker-Image.
+Automatische Tests sind vorgesehen für
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+  
+Browser mit unbedeutendem Marktanteil wie z.B. Opera, Silk oder Safari sollten ebenfalls funktionieren,
+hierfür Tests zu entwickeln steht aber in keinem sinnvollen Verhältnis zum dafür nötigen Aufwand.
 
 #### Entwicklungsplattform
 Die Plattform bzw. das Framework ist noch auszuwählen. Derzeit sind folgende Möglichkeiten in Evaluation:
@@ -117,18 +123,18 @@ Die Plattform bzw. das Framework ist noch auszuwählen. Derzeit sind folgende M�
 - Vaadin
 - HTML mit Thymeleaf
 
-
-![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
 ### Such- und Indexsystem
+![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+
 Um das Rad nicht neu zu erfinden, soll auf ein frei verfügbares Standardsystem zum Durchsuchen und Indizieren zurückgegriffen werden.
 
 In Evaluation befinden sich derzeit:
 - Elastic Search
 - OpenSearch
 
-
-![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg)
 ### Frontend Desktop App
+![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg)
+
 Die Desktop-App wird für Vorgänge benötigt, die aus einem Webclient nicht möglich sind, z.B. aufgrund von 
 Hardware-Zugriffen.
 Folgende Operationen sind für die Desktop-App vorgesehen:
@@ -143,10 +149,9 @@ Folgende Operationen sind für die Desktop-App vorgesehen:
 Sollte eine hardwarenahe Funktionalität wie die Aufnahme von Webcam und das Scannen von Dokumenten in einer Webanwendung möglich sein (dafür gibt es Anzeichen bei Vaadin), so könnte der Desktop Client potentiell entfallen.
 Dies erfordert aber weitere Untersuchungen.
 
-
+#### Betriebssysteme
 ![Generic badge](https://img.shields.io/badge/Package-deb-green.svg?logo=debian)
 ![Generic badge](https://img.shields.io/badge/Package-MSI-green.svg?logo=windows)
-#### Betriebssysteme
 
 Unter Linux kann das Paket direkt installiert werden.
 Zu prüfen ist eine Verteilungsmöglichkeit über die gängigen Paketmanager.
@@ -154,14 +159,13 @@ Zu prüfen ist eine Verteilungsmöglichkeit über die gängigen Paketmanager.
 Unter Windows ist es mit heutigen Mitteln problemlos möglich, direkt im Java-Build sowohl eine Windows-gängige-EXE-Datei
 zu erzeugen, als auch einen Standard-MSI-Installer mit Deinstallations- und Updatefähigkeit. 
 
-
-![Generic badge](https://img.shields.io/badge/Plattform-Java_FX-green.svg)
 #### Entwicklungsplattform
-Die Desktop-App wird mit JavaFX erstellt und ist damit auf Linux und Windows lauffähig. ![Generic badge](https://img.shields.io/badge/Plattform-Java_FX-green.svg)
+![Generic badge](https://img.shields.io/badge/Plattform-Java_FX-green.svg)
 
-
-![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+Die Desktop-App wird mit JavaFX erstellt und ist damit auf Linux und Windows lauffähig.
 ### Frontend Mobile App 
+![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+
 Der Mobile-Client stellt eine Vereinfachung des Desktop-Clients dar und dient zur Datenerfassung "vor dem Regal", also
 ohne z.B. alle Bücher erst zu einem Schreibtisch tragen zu müssen. Aufgrund der geringeren Displaygröße sind auf dem
 Mobilgerät nur einige der Funktionen der Desktop App vorgesehen.
@@ -175,21 +179,17 @@ Mobilgerät nur einige der Funktionen der Desktop App vorgesehen.
 Soweit möglich sollte in der Desktop- und der Mobile-App versucht werden, Code wiederzuverwenden bzw. auf die gleichen
 Module zuzugreifen.
 
-
-![Generic badge](https://img.shields.io/badge/OS-Android-green.svg?logo=android)
 #### Betriebssysteme 
+![Generic badge](https://img.shields.io/badge/OS-Android-green.svg?logo=android)
+
 Der Mobile Client wird ausschließlich für die Android-Plattform entwickelt. Die Windows-Phone-Umgebung hat keine
-nennenswerte Verbreitung und die Apple Plattform würde zu hohe Hardware-Kosten auslösen.
+nennenswerte Verbreitung und die Apple Plattform würde abgesehen von der zu geringen Verbreitung auch zu hohe Kosten auslösen.
+Zu berücksichtigen wäre ggf. auch der Trend anstelle von teuren AppStore-Deployments auch Web-Apps anzubieten. 
+Dies erfordert aber noch weitere Forschung.
 
-
-![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
-### Volltextsuche / Index 
-Das Backend stellt eine Kategorie- und Dateiübersicht bereit. Um aber eine alltagstaugliche Recherche zu ermöglichen,
-wird zusätzlich eine flexible Volltext-Suchfunktion benötigt. Dafür soll die Standardsoftware "Elasticsearch" untersucht werden.
-
-
-![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
 ### 3rd Party Tools 
+![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
+
 Für die Vorbereitung der Dateien zur Archivierung sollen möglichst kostenlose Standardtools genutzt werden, um die zu
 archivierenden Dateien im vorgsehenen Format und mit den vorgesehenen Eigenschaften bereitzustellen. Dazu sind folgende
 Tools in der Auswahl:
@@ -198,4 +198,3 @@ Tools in der Auswahl:
 - ![Generic badge](https://img.shields.io/badge/Tool-Ausgewählt-green.svg) Scannen von beliebigen Dokumenten von beliebigen Scannern als PDF: NAPS2 
 - ![Generic badge](https://img.shields.io/badge/Tool-Auf_der_Suche-red.svg) Taggen von PDF-Dateien: (TBA) 
 - ![Generic badge](https://img.shields.io/badge/Tool-Ausgewählt-green.svg) Dashboard als Einstieg in die Archivverwaltung: Homepage (Docker-Image gethomepage/homepage) 
-
