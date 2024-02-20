@@ -75,7 +75,7 @@ Als Entwicklungswerkzeug werden empfohlen:
 
 ## Komponenten bzw. Teilprojekte
 
-### Backend ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg)
+### ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Entwicklung-yellow.svg) Backend
 Das Backend läuft auf dem zentralen Server und hat als einzige Komponente direkten Zugriff auf die Bestandsdaten.
 
 Andere Komponenten greifen über eine Rest-Schnittstelle zu, um Jobs zu starten, Katalogdaten zu bearbeiten, oder Daten abzufragen.
