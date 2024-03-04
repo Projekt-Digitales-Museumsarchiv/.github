@@ -120,8 +120,8 @@ hierfür Tests zu entwickeln steht aber in keinem sinnvollen Verhältnis zum daf
 Die Plattform bzw. das Framework ist noch auszuwählen. Derzeit sind folgende Möglichkeiten in Evaluation:
 - Angular
 - React
-- Vaadin
-- HTML mit Thymeleaf
+- Vaadin (ausgeschieden: man kommt zu schnell an die Grenzen der kostenlosen Version)
+- HTML mit Thymeleaf (ausgeschieden: zu wenig Gestaltungsmöglichkeiten)
 
 ### Such- und Indexsystem
 ![Generic badge](https://img.shields.io/badge/Projektstatus-In_Definition-red.svg)
@@ -138,11 +138,11 @@ In Evaluation befinden sich derzeit:
 Die Desktop-App wird für Vorgänge benötigt, die aus einem Webclient nicht möglich sind, z.B. aufgrund von 
 Hardware-Zugriffen.
 Folgende Operationen sind für die Desktop-App vorgesehen:
-- Aufnahme von Einzelbildern mit der Webcam (native in JavaFX)
-- Suche nach ISBN/EAN-Barcodes im aufgenommenen Bild (evtl. Apache Tika)
-- ISBN/EAN-Barcode auswerten (TBA)
-- Foto einer aufgedruckten ISBN mit OCR auswerten (evtl. Apache Tika)
-- Abfrage von Mediendaten und Cover aus einer externen Datenbank (Partner gesucht!)
+- Aufnahme von Einzelbildern mit der Webcam (gesetzt: native in JavaFX)
+- Suche nach ISBN/EAN-Barcodes als Text im aufgenommenen Bild (gesetzt: ZBar)
+- ISBN/EAN-Barcode im Bild auswerten (gesetzt: ZBar)
+- Foto einer aufgedruckten ISBN mit OCR auswerten (gesetzt: Apache Tika)
+- Abfrage von Mediendaten und Cover aus einer externen Datenbank (gesetzt: Google Books)
 - Ggf. Mediendaten manuell erfassen und Coverfoto aufnehmen.
 - Katalogdaten erzeugen und in DB speichern
 
